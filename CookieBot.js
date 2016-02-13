@@ -88,7 +88,7 @@ CookieBot.startClicker = function(){
 
 CookieBot.startGoldenClicker = function(){
 	CookieBot.goldenClicker = setInterval(function(){
-		if (Game.goldenCookie.life > 0 && Game.goldenCookie.wrath == 0) {
+		if (Game.goldenCookie.life > 0 && Game.goldenCookie.wrath == 0 && Game.goldenCookie.l.style.display != 'none') {
 			Game.goldenCookie.click();
 		}		
 	},3000)
