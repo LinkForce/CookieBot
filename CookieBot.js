@@ -112,7 +112,7 @@ CookieBot.stopLoopBuyBest = function (){
 }
 
 CookieBot.buyWrathIfAvaible = function (){
-	if (Game.elderWrath > 0 && Game.Upgrades['Elder Pledge'].unlocked == 1 && Game.pledgeT > 0){
+	if (Game.elderWrath > 0 && Game.Upgrades['Elder Pledge'].unlocked == 1 && Game.pledgeT == 0){
 		Game.Upgrades['Elder Pledge'].buy();		
 	}	
 }
@@ -122,6 +122,6 @@ CookieBot.startLoopBuyWrathIfAvaible = function () {
 	
 }
 
-CookieBot.stopLoopbuyWrathIfAvaible = function (){
+CookieBot.stopLoopBuyWrathIfAvaible = function (){
 	clearInterval(CookieBot.loopBuyWrathIfAvaible);
 }
