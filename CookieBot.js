@@ -69,7 +69,7 @@ switch (lowestBciType){
 
 if ( ((Game.cookies - lowestBciCost) > CM.Cache.LuckyFrenzy && CookieBot.waitLuckyFrenzy) ||
 	((Game.cookies - lowestBciCost) > CM.Cache.Lucky && CookieBot.waitLucky) ||
-	(waitLucky == false && waitLuckyFrenzy == false)      ){
+	(CookieBot.waitLucky == false && CookieBot.waitLuckyFrenzy == false)      ){
 	switch (lowestBciType){
 		case "Object":
 			Game.Objects[lowestBci].buy();
