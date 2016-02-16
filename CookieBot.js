@@ -20,6 +20,8 @@ CookieBot.clicker = 0;
 CookieBot.goldenClicker = 0;
 CookieBot.loopBuyBest = 0;
 CookieBot.loopBuyWrathIfAvaible = 0;
+CookieBot.waitLucky = false;
+CookieBot.waitLuckyFrenzy = false;
 
 CookieBot.buyBest = function (){	
 	
@@ -65,8 +67,9 @@ switch (lowestBciType){
 		break;
 	}	
 
-if ((Game.cookies - lowestBciCost) > CM.Cache.LuckyFrenzy){
-//if (true){
+if ( ((Game.cookies - lowestBciCost) > CM.Cache.LuckyFrenzy && CookieBot.waitLuckyFrenzy) ||
+	((Game.cookies - lowestBciCost) > CM.Cache.Lucky && CookieBot.waitLucky) ||
+	(waitLucky == false && waitLuckyFrenzy == false)      ){
 	switch (lowestBciType){
 		case "Object":
 			Game.Objects[lowestBci].buy();
